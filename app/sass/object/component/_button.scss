@@ -1,0 +1,106 @@
+/*
+---
+name: base button
+category:
+ - component/button
+tag:
+ - base
+ - button
+---
+
+## This is base button
+
+* Base button style.
+* Use `a` or `button` tag.
+
+```html
+<div>
+  <button class="c-button">ボタン</button>
+  <button class="c-button icon-arrow-right">ボタン</button>
+  <button class="c-button icon-arrow-left">ボタン</button>
+</div>
+<div>
+  <button class="c-button--strong">強調ボタン</button>
+  <button class="c-button--strong icon-arrow-right">強調ボタン</button>
+  <button class="c-button--strong icon-arrow-left">強調ボタン</button>
+</div>
+<div>
+  <button class="c-button--disabled">非活性ボタン</button>
+  <button class="c-button--disabled icon-arrow-right">非活性ボタン</button>
+  <button class="c-button--disabled icon-arrow-left">非活性ボタン</button>
+</div>
+<div>
+  <button class="c-button--return">戻るボタン</button>
+  <button class="c-button--return icon-arrow-right">戻るボタン</button>
+  <button class="c-button--return icon-arrow-left">戻るボタン</button>
+</div>
+```
+*/
+%icon-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  @include fz(18);
+}
+
+%button {
+  position: relative;
+  @include fz(14);
+  color: #fff;
+  padding: 1em 2em;
+  border-radius: 3px;
+  background-color: $c_main;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &.icon-arrow {
+    &-right {
+      &:before {
+        right: 12px;
+        @extend %icon-arrow;
+        @extend %fa_properties;
+        content: $fa-var-angle-right;
+      }
+    }
+
+    &-left {
+      &:after {
+        left: 12px;
+        @extend %icon-arrow;
+        @extend %fa_properties;
+        content: $fa-var-angle-left;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: lighten($c_main, 15%);
+  }
+}
+
+.c-button {
+  @extend %button;
+
+  &--strong {
+    @extend %button;
+    font-weight: bold;
+  }
+
+  &--disabled {
+    @extend %button;
+    background-color: #555;
+    pointer-events: none;
+  }
+
+  &--return {
+    @extend %button;
+    color: $c_main;
+    background-color: #fff;
+    border: solid 1px $c_main;
+
+    &:hover {
+      background-color: darken($c_white, 10%);
+    }
+  }
+}

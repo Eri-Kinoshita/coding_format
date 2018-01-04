@@ -1,0 +1,5 @@
+// font-sizeを px/rem で出力します
+@mixin fz($size) {
+  font-size: $size + px;
+  font-size: ($size / 10) * 1rem;
+}

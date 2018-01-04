@@ -1,0 +1,97 @@
+/*
+---
+name: Dropdown Menu
+category:
+ - component/js/.l-dropdowni
+---
+
+```html
+<nav class="c-dropdown">
+  <ul class="c-dropdown__f-level">
+    <li><a href="">Menu01</a>
+        <ul class="c-dropdown__s-level">
+            <li><a href="">list01</a></li>
+            <li><a href="">list02</a></li>
+            <li><a href="">list03</a></li>
+            <li><a href="">list04</a></li>
+        </ul>
+    </li>
+    <li><a href="">Menu02</a>
+        <ul class="c-dropdown__s-level">
+            <li><a href="">list01</a></li>
+            <li><a href="">list02</a></li>
+            <li><a href="">list03</a></li>
+        </ul>
+    </li>
+    <li><a href="">Menu03</a>
+        <ul class="c-dropdown__s-level">
+            <li><a href="">list01</a></li>
+            <li><a href="">list02</a></li>
+            <li><a href="">list03</a></li>
+        </ul>
+    </li>
+    <li><a href="">Menu04</a>
+        <ul class="c-dropdown__s-level">
+            <li><a href="">list01</a></li>
+            <li><a href="">list02</a></li>
+            <li><a href="">list03</a></li>
+        </ul>
+    </li>
+    <li><a href="">Menu05</a>
+        <ul class="c-dropdown__s-level">
+            <li><a href="">list01</a></li>
+            <li><a href="">list02</a></li>
+            <li><a href="">list03</a></li>
+        </ul>
+    </li>
+  </ul>
+</nav>
+```
+*/
+
+.c-dropdown {
+	@include fz(14);
+  width: 100%;
+  &__f-level {
+  	width: 100%;
+  	@include mq(sm) {
+  		width: 960px;
+    	margin: 0 auto;
+    	font-size: 0;
+  	}
+  	& > li {
+  		@include mq(sm) {
+  			border-right: 1px solid rgba(0,0,127,.8);
+  			display: inline-block;
+    		width: calc(100% / 5);
+    		vertical-align: top;
+    		&:last-child {
+    			border-right: none;
+    		}
+  		}
+  		& > a{
+  			color: #eee;
+				// border-bottom: 1px solid rgba(0,0,127,.8);
+				background: #00007F;
+			}
+		}
+	}
+	a {
+		@include fz(14);
+		text-decoration: none !important;
+		display: block;
+	  width: 100%;
+	  padding: 10px 0;
+	  border-bottom: 1px solid rgba(0,0,127,.8);
+	  background: #fff;
+	  color: #333;
+	  text-align: center;
+	}
+	&__s-level {
+		display: none;
+		li {
+			border-top: none;
+			border: 1px solid rgba(0,0,127,.8);
+		}
+	}
+}

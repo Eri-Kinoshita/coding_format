@@ -1,0 +1,116 @@
+/*
+---
+name: Modal
+category:
+ - component/js/modal
+---
+
+```html
+<div class="c-modal">
+  <div class="c-modal__bg"></div>
+  <div class="c-modal__contents">
+    <div class="c-modal__contents__inner">
+      <h2 class="c-heading--lv2">ログイン</h2>
+      <form>
+        <div class="c-form__inner">
+            <p>メールアドレス</p>  
+            <input type="text" name="" value="" class="c-form-input" placeholder="メールアドレスを入力してください。">
+            <p>パスワード</p>
+            <input type="password" name="" value="" class="c-form-input" placeholder="パスワードを入力してください。">
+        </div>
+        <div class="c-form__inner">
+            <button type="button" data-js="modal-apply" class="c-button">モーダル内の特定のボタンを押下したらモーダルを閉じる</button>
+        </div>
+      </form>
+      <ul class="c-list--link">
+        <li><a href="/DUMMY"><i class="c-link__icon c-list__icon -front fa fa-caret-right"></i>会員登録</a></li>
+        <li><a href="/DUMMY"><i class="c-link__icon c-list__icon -front fa fa-caret-right"></i>パスワードを忘れた場合</a></li>
+      </ul>
+    </div>
+    <div class="c-modal__close" data-js="modal-close"></div>
+  </div>
+</div>
+<button type="button" data-js="modal-open">モーダルを開く</button>
+```
+*/
+.is-overflow-y {
+  overflow-y: hidden;
+}
+
+.c-modal {
+  &.is-open {
+    display: block;
+  }
+  @at-root {
+    #{ &}__bg {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 9000;
+    }
+
+    #{ &}__contents {
+      display: none;
+      position: fixed;
+      overflow-y: scroll;
+      max-height: 95%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 9100;
+      background-color: #fff;
+      border-radius: 5px;
+      @include pc() {
+        width: 800px;
+        padding: 30px;
+      }
+      @include sp() {
+        width: calc(100% - 30px);
+        padding: 30px 20px;
+      }
+    }
+
+    #{ &}__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      z-index: 9200;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:after,
+      &:before {
+        content: "";
+        display: block;
+        height: 1px;
+        background: #000;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        @include pc() {
+          width: 20px;
+        }
+        @include sp() {
+          width: 15px;
+        }
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

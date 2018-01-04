@@ -1,0 +1,17 @@
+.is-pc {
+  @include pc() {
+    display: block !important;
+  }
+  @include sp() {
+    display: none !important;
+  }
+}
+
+.is-sp {
+  @include pc() {
+    display: none !important;
+  }
+  @include sp() {
+    display: block !important;
+  }
+}

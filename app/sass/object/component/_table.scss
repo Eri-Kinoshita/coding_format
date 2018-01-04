@@ -1,0 +1,171 @@
+/*
+---
+name: Table simple (table tag)
+category:
+ - component/table
+---
+
+```html
+<table class="c-table">
+    <tbody>
+        <tr>    
+            <th>見出しが入ります</th>
+            <td>テキストが入りますテキストが入りますテキストが入ります</td>
+        </tr>
+        <tr>    
+            <th>見出しが入ります</th>
+            <td>テキストが入りますテキストが入りますテキストが入ります</td>
+        </tr>
+    </tbody>
+</table>
+```
+*/
+%table {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    text-align: left;
+}
+
+.c-table {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-collapse: collapse;
+    th, td {
+        @extend %table;
+    }
+    th {
+        color: $c_main;
+        font-weight: bold;     
+    }
+    @include pc {
+        width: 100%;
+    }    
+    @include sp {
+        th,td {
+            display: block;
+            width: 100%;
+        }
+        th {
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
+/*
+---
+name: Table simple (dl tag)
+category:
+- component/table
+---
+
+```html
+<div class="c-table--dl">
+    <dl>
+        <dt>見出しが入ります</dt>
+        <dd>テキストが入りますテキストが入りますテキストが入ります</dd>
+    </dl>
+    <dl>
+        <dt>見出しが入ります</dt>
+        <dd>テキストが入りますテキストが入りますテキストが入ります</dd>
+    </dl>
+</div>
+```
+*/
+.c-table--dl {
+    dl {
+        display: flex;
+        width: 100%;
+        &:first-of-type {
+            border-top: 1px solid #ccc;
+        }
+        @include pc {
+            flex-direction: row;
+            dt {
+                display: flex;
+                align-items: center;
+                width: 30%;
+            }
+            dd {
+                width: 70%;
+            }
+        }    
+        @include sp {
+            flex-direction: column;
+            dt, dd {
+                width: 100%;
+            }
+            dt {
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+    dt, dd {
+        @extend %table;
+    }
+    dt {
+        color: $c_main;
+        font-weight: bold;
+    }
+}
+/*
+---
+name: Table scroll
+category:
+- component/table
+---
+
+```html
+<table class="c-table--scroll">
+    <thead>
+        <tr>
+            <th>見出しその1</th>
+            <th>見出しその2</th>
+            <th>見出しその3</th>
+            <th>見出しその4</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>見出しが入ります</th>
+            <td>テキストが入りますテキストが入ります</td>
+            <td>テキストが入りますテキストが入ります</td>
+            <td>テキストが入りますテキストが入ります</td>
+        </tr>
+        <tr>
+            <th>見出しが入ります</th>
+            <td>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</td>
+            <td>テキストが入りますテキストが入ります</td>
+            <td>テキストが入りますテキストが入ります</td>
+        </tr>
+        <tr>
+            <th>見出しが入ります</th>
+            <td>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります</td>
+            <td>テキストが入りますテキストが入ります</td>
+            <td>テキストが入りますテキストが入ります</td>
+        </tr>
+    </tbody>
+</table>
+```
+*/
+.c-table--scroll {
+    border-top: 1px solid #ccc;
+    border-collapse: collapse;
+    th, td {
+        min-width: 200px;
+        @extend %table;
+        &:not(:first-child) {
+            border-left: 1px solid #ccc;
+        }
+    }
+    th {
+        color: $c_main;
+        font-weight: bold;     
+    }
+    thead th {
+        background-color: #f8f8f8;
+    }
+    @include sp {
+        display: block;
+        overflow-x: scroll;
+    }
+}
