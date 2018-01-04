@@ -1,0 +1,159 @@
+/*
+---
+name: Navi
+category:
+ - component/js/navi
+---
+
+```html
+<div class="c-glnav" data-js="globalNav">
+	<div class="c-glnav__btn" data-js="globalNav-btn">
+		<span class="c-glnav__btn__bars"></span>
+	</div>
+	<div class="c-glnav__inner">
+		<ul class="c-glnav__list">
+			<li class="c-glnav__list__item"><a href="nav">ページ1</a></li>
+			<li class="c-glnav__list__item"><a href="nav">ページ2</a></li>
+			<li class="c-glnav__list__item"><a href="">ページ3</a></li>
+			<li class="c-glnav__list__item"><a href="">ページ4</a></li>
+			<li class="c-glnav__list__item"><a href="">ページ5</a></li>
+			<li class="c-glnav__list__lang"><a href="" title="">ENGLISH</a> / <a href="" title="">中文</a></li>
+		</ul>
+	</div>
+	<!-- /.c-glnav__inner -->
+</div>
+```
+*/
+
+.c-glnav {
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 100vh;
+	background: rgba(0,0,0,0);
+	transition: 0.3s;
+	z-index: 10000;
+	&.is-active{
+		display: flex;
+		width: 100%;
+   	background: rgba(0,0,0,.8);
+  }
+  @include mq(sm) {
+  	position: relative;
+  	top: 0;
+		left: 0;
+  	width: 100%;
+		height: 100px;
+  }
+  &__inner {
+		flex-grow: 1;
+		display: none;
+		width: 100%;
+		height: 100%;
+		background: #0852a0;
+		padding: 15px;
+		.is-active &{
+			display: flex;
+  	}
+  	@include mq(sm) {
+  		background: #fff;
+  		padding: 0 50px;
+	  	display: inline-block;
+			text-align: right;
+	  }
+	}
+	&__btn {
+		position: relative;
+		width: 50px;
+		height: 50px;
+		background: #fff;
+		pointer-events: auto;
+		.is-active &{
+			background: #0852a0;
+  	}
+  	@include mq(sm) {
+  		display: none;
+  	}
+		&__bars {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 20px;
+			height: 1px;
+			background: #000;
+			transform: translateX(-50%) translateY(-50%);
+			&:before, &:after {
+				display: block;
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 1px;
+				background: #000;
+			}
+			&:before {
+	     	transform: translateY(-7px)
+	    }
+	    &:after {
+	    	transform: translateY(7px)
+	    }
+			.is-active & {
+				visibility: hidden;
+				background: #FFF;
+				transform: translate(-50%, -50%);
+				&:before, &:after {
+					visibility: visible;
+					background: #FFF;
+				}
+				&:before {
+	      	transform: rotate(45deg) scale(0.75,1) translateY(-4px) translateX(-19%);
+	      }
+	      &:after {
+	      	transform: rotate(-45deg) scale(0.75,1) translateY(4px) translateX(-19%);
+	      }
+	    }
+		}
+	}
+	&__list {
+		white-space:nowrap;
+		&__item{
+			padding: 20px 10px;
+			a {
+				color: #fff;
+				text-decoration: none;
+				line-height: 1.5;
+				@include fz(14);
+				@include mq(sm) {
+  				color: #333;
+  			}
+			}
+			@include mq(sm) {
+  			display: inline;
+  		}
+		}
+		&__lang {
+			color: #fff;
+			padding: 30px 10px 20px;
+			margin-top: 10px;
+			border-top: 1px solid #027ad7;
+			display: inline-block;
+			a {
+				color: #fff;
+				@include fz(14);
+				&:first-child {
+					padding-right: 10px;
+				}
+				&:last-child {
+					padding-left: 10px;
+				}
+				@include mq(sm) {
+  				color: #333;
+  			}
+			}
+			@include mq(sm) {
+  			border: none;
+  		}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+/*
+ libraries
+-------------------------------------------------- */
+// ライブラリ
+@import "../libraries/font-awesome/font-awesome";
+@import "../libraries/flexslider/flexslider";
+
+/*
+ foundation
+-------------------------------------------------- */
+// デフォルトスタイルの初期化、変数管理 等
+@import "../partials/var";
+@import "../partials/functions";
+@import "../partials/extends";
+@import "../partials/mixin/mixins";
+@import "../partials/animations";
+@import "../foundation/normalize";
+@import "aigis_common";
+
+/*
+ object
+-------------------------------------------------- */
+// サイト内で繰り返されるパターン
+/* component --------------------------- */
+// 再利用できるもの - ボタン、ナビゲーション、ページャ 等
+
+.aigis-preview {
+  @import "../object/component/**";
+}

@@ -1,0 +1,23 @@
+// Pass
+	$img_path:        '/files/user/css/images/';
+
+// Fonts
+	$base_font_size:  15;
+	$base_font_color: #333333;
+
+// Color
+	$c_main:          #1E50A2;
+	$c_white:         #FFF;
+	$c_black: 	      #000;
+				
+
+// BP
+	$break_point:     768px; // @include pc/sp(){...} で参照されるブレイクポイント
+	//== Screen Size
+	$screen-xs: 480px !default; //Extra small screen(xs)->smartphone
+	$screen-sm: 768px !default; //Small screen(sm) ->tablet
+	$screen-md: 992px !default; //Medium screen(md) ->desktop
+	$screen-lg: 1200px !default; //Large screen(lg） ->wide desktop
+
+// Grid
+	$grid_split_num:  12; // Gridの分割

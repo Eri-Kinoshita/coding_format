@@ -1,0 +1,119 @@
+<%
+var page = 'top';
+var title = 'トップページ';
+%>
+@@include('app/ejs/_include/head.ejs')
+@@include('app/ejs/_include/header.ejs')
+
+<div class="l-wrap l-container--huge">
+<!-- Button -->
+<h3></h3>
+<div>
+  <button class="c-button">ボタン</button>
+  <button class="c-button icon-arrow-right">ボタン</button>
+  <button class="c-button icon-arrow-left">ボタン</button>
+</div>
+
+
+<!-- 画像 -->
+<h3>画像</h3>
+
+<div class="c-imageText">
+	<div class="c-imageText__picture--top">
+		<img src="/files/user/images/600x400.png">
+		<p class="c-imageText__caption">画像のキャプションが入ります。</p>
+	</div>
+	<p class="c-text">画像上配置＋テキストです。画像上配置＋テキストです。画像上配置＋テキストです。画像上配置＋テキストです。画像上配置＋テキストです。画像上配置＋テキストです。画像上配置＋テキストです。画像上配置＋テキストです。画像上配置＋テキストです。</p>
+</div>
+
+<div class="c-imageText">
+	<div class="c-imageText__picture--right">
+		<img src="/files/user/images/300x200.png">
+		<p class="c-imageText__caption">画像のキャプションが入ります。画像のキャプションが入ります。画像のキャプションが入ります。</p>
+	</div>
+	<p class="c-text">画像右配置＋テキストです。画像右配置＋テキストです。画像右配置＋テキストです。画像右配置＋テキストです。画像右配置＋テキストです。<br><br>画像右配置＋テキストです。<br>画像右配置＋テキストです。<br>画像右配置＋テキストです。<br>画像右配置＋テキストです。画像右配置＋テキストです。</p>
+</div>
+
+<div class="c-imageText">
+	<div class="c-imageText__picture--left">
+		<img src="/files/user/images/200x133.png">
+		<p class="c-imageText__caption">画像のキャプションが入ります。画像のキャプションが入ります。</p>
+	</div>
+	<p class="c-text">画像左配置＋テキストです。画像左配置＋テキストです。<br>画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。<br>画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。</p>
+</div>
+
+<div class="c-imageText">
+	<p class="c-text">画像下配置＋テキストです。画像下配置＋テキストです。画像下配置＋テキストです。画像下配置＋テキストです。</p>
+	<div class="c-imageText__picture--bottom">
+		<img src="/files/user/images/600x400.png">
+		<p class="c-imageText__caption">画像のキャプションが入ります。画像のキャプションが入ります。画像のキャプションが入ります。画像のキャプションが入ります。画像のキャプションが入ります。画像のキャプションが入ります。画像のキャプションが入ります。</p>
+	</div>
+</div>
+
+<!-- LINK -->
+<h3>LINK</h3>
+<article class="c-article">
+	<p>テキストが入っています。テキストが入っています。<a href="/DUMMY">テキストリンク</a>テキストが入っています。</li>
+	<ul class="c-list--link">
+		<li><a href="/DUMMY"><i class="c-link__icon c-list__icon -front fa fa-caret-right"></i>矢印リンク矢印リンク矢印リンク</a></li>
+		<li><a href="/DUMMY"><i class="c-link__icon c-list__icon -front fa fa-caret-right"></i>別窓リンク別窓リンク別窓リンク別窓リンク<i class="c-link__icon -rear fa fa-window-restore"></i></a></li>
+		<li><a href="/DUMMY"><i class="c-link__icon c-list__icon -front fa fa-caret-right"></i>PDFリンクPDFリンクPDFリンクPDFリンク(532KB)<i class="c-link__icon -rear fa fa-file-pdf-o"></i></a></li>
+	</ul>
+</article>
+
+<!-- リスト -->
+<h3>リスト</h3>
+<ul class="c-list--disc">
+	<li>リストです。リストです。リストです。リストです。リストです。リストです。</li>
+	<li>リストです。リストです。リストです。リストです。リストです。リストです。</li>
+	<li>リストです。リストです。リストです。リストです。リストです。リストです。リストです。リストです。リストです。リストです。リストです。リストです。</li>
+</ul>
+
+<!-- Toggle -->
+<h3>Toggle</h3>
+<div class="c-form__inner">
+    <ul class="c-form-toggle__list">
+        <li><label><input type="radio" name="radio1" value="" class="c-form-toggle__radio">選択肢その1</label></li>
+        <li><label><input type="radio" name="radio1" value="" class="c-form-toggle__radio">選択肢その2</label></li>
+        <li><label><input type="radio" name="radio1" value="" class="c-form-toggle__radio">選択肢その3</label></li>
+    </ul>
+</div>
+
+<div class="c-form__inner">
+    <ul class="c-form-toggle__list--inline">
+        <li><label><input type="radio" name="radio2" value="" class="c-form-toggle__radio">選択肢その1</label></li>
+        <li><label><input type="radio" name="radio2" value="" class="c-form-toggle__radio">選択肢その2</label></li>
+        <li><label><input type="radio" name="radio2" value="" class="c-form-toggle__radio">選択肢その3</label></li>
+    </ul>
+</div>
+
+<!-- トピック -->
+<h3>トピック</h3>
+<ul class="c-topics__list">
+	<li class="c-topics__item">
+		<time class="c-topics__date" datetime="YYYY-mm-dd">2017.10.19</time>
+		<div class="c-topics__label">カテゴリ</div>
+		<div class="c-topics__title"><a href="/DUMMY">記事タイトルが入ります。記事タイトルが入ります。</a></div>
+	</li>
+	<li class="c-topics__item">
+		<time class="c-topics__date" datetime="YYYY-mm-dd">2017.10.19</time>
+		<div class="c-topics__label">カテゴリ</div>
+		<div class="c-topics__title"><a href="/DUMMY">記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。</a></div>
+	</li>
+	<li class="c-topics__item">
+		<time class="c-topics__date" datetime="YYYY-mm-dd">2017.10.19</time>
+		<div class="c-topics__label">カテゴリ</div>
+		<div class="c-topics__title"><a href="/DUMMY">記事タイトルが入ります。記事タイトルが入ります。</a></div>
+	</li>
+	<li class="c-topics__item">
+		<time class="c-topics__date" datetime="YYYY-mm-dd">2017.10.19</time>
+		<div class="c-topics__label">カテゴリ</div>
+		<div class="c-topics__title"><a href="/DUMMY">記事タイトルが入ります。記事タイトルが入ります。</a></div>
+	</li>
+	<li class="c-topics__item">
+		<time class="c-topics__date" datetime="YYYY-mm-dd">2017.10.19</time>
+		<div class="c-topics__label">カテゴリ</div>
+		<div class="c-topics__title"><a href="/DUMMY">記事タイトルが入ります。記事タイトルが入ります。</a></div>
+	</li>
+</ul>
+@@include('app/ejs/_include/footer.ejs')

@@ -1,0 +1,86 @@
+.l-container {
+  position: relative;
+
+  &--huge {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    @include pc() {
+      min-width: 1360px;
+    }
+  }
+
+  &--large {
+    position: relative;
+    @include pc() {
+      width: 1360px;
+      margin: 0 auto;
+    }
+    @include sp() {
+      width: 100%;
+    }
+  }
+
+  &--middle {
+    position: relative;
+    @include pc() {
+      width: 1140px;
+      margin: 0 auto;
+    }
+    @include sp() {
+      width: 100%;
+    }
+  }
+
+  &--single {
+    position: relative;
+    @include pc() {
+      width: 980px;
+      margin: 0 auto;
+    }
+    @include sp() {
+      width: 100%;
+    }
+  }
+
+  &--main {
+    position: relative;
+    @include pc() {
+      width: 680px;
+      float: left;
+    }
+    @include sp() {
+      width: 100%;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+
+  &--side {
+    position: relative;
+    @include pc() {
+      width: 420px;
+      margin-left: 40px;
+      float: right;
+    }
+    @include sp() {
+      width: 100%;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+
+  &--wrap {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+[class*=" l-"],
+[class^="l-"] {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
