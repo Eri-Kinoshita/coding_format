@@ -1,0 +1,22 @@
+// div#container{
+//  margin: 0 auto;
+//  background-color: #ddd;
+//  width:960px;
+// }
+
+.l-container--main {
+//  float:left;
+ background-color: red;
+//  width:700px;
+//  height:400px;
+}
+
+.l-container--side {
+//  float:right;
+	background-color: yellow;
+//  width:260px;
+//  height:300px;
+	&:after {
+		@extend .u-cl-b;
+	}
+}

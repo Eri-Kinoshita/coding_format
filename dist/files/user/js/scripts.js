@@ -19,6 +19,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
       _screenWidth = window.screen.width;
       resizeWidth();
       console.log("resize");
+      imgSizing();
     });
 
     resizeWidth();
@@ -129,6 +130,36 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
       event.preventDefault();
     });
 
+    /* 画像比率を保持
+     ***************************************/
+    function imgSizing() {
+      $('[data-js="imgSizing"]').each(function(){
+        // 表示状態の画像の大きさ
+        var img_height = $(this).height();
+        var img_width  = $(this).width();
+        var img_whRatio = img_width / img_height;
+
+        // 実際の画像の大きさ
+        var img = new Image();
+        img.src = $("img",this).attr('src');
+        var _width = img.width;
+        var _height = img.height;
+        var _whRatio = _width / _height;
+
+        // 画面の横幅
+        // var device_width = $(window).width();
+
+        // 縦長横長を判断する
+        if( img_whRatio > _whRatio ){
+          $("img",this).css("width", "100%");
+          $("img",this).css("height", "auto");
+        }else{
+          $("img",this).css("width", "auto");
+          $("img",this).css("height", "100%");
+        }
+    });
+    }
+
     /* スライダー
      ***************************************/
     var sliderLoopFlg = false;
@@ -141,7 +172,11 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
       pauseOnAction: false, // 操作をしている間、スライドを停止 true/false
       directionNav: false, // 両サイドの矢印を表示 true/false
       slideshowSpeed: 5000, // スライドの間隔(1000=1秒)
-      initDelay: 0 // スライドが始まるまでの時間(1000=1秒)
+      initDelay: 0, // スライドが始まるまでの時間(1000=1秒)
+      // controlNav: "thumbnails",
+      itemWidth: 240,
+      // minItems: 2,
+      maxItems: 3
     });
 
     /***************************************/

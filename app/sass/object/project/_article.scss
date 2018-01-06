@@ -1,0 +1,6 @@
+.p-article {
+	&__wrap {
+		@include sp() { margin: 15px; }
+		@include pc() { margin: 15px; }
+	}
+}

@@ -3842,7 +3842,7 @@ category:
 
 ```html
 <div class="flexslider" data-js="flexslider">
-  <ul class="slides">
+  <ul class="slides c-slides">
     <li>
       <img src="/files/user/images/flexslider/flexslider_01.jpg" />
     </li>
@@ -4047,6 +4047,28 @@ category:
 <p class="c-text c-text--align-center">テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。</p>
 <p class="c-text c-text--align-left">テキストが入ります。テキストが入ります。テキストが入ります。<br>テキストが入ります。テキストが入ります。</p>
 
+```
+*/
+  /*
+---
+name: Title
+category:
+ - component/title
+---
+
+```html
+<table class="c-table">
+    <tbody>
+        <tr>    
+            <th>見出しが入ります</th>
+            <td>テキストが入りますテキストが入りますテキストが入ります</td>
+        </tr>
+        <tr>    
+            <th>見出しが入ります</th>
+            <td>テキストが入りますテキストが入りますテキストが入ります</td>
+        </tr>
+    </tbody>
+</table>
 ```
 */
   /*
@@ -4948,6 +4970,36 @@ category:
     text-align: center; }
   .aigis-preview .c-text--align-left {
     text-align: left; }
+  .aigis-preview .c-title {
+    position: relative;
+    width: 90%;
+    height: 80px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    background: #FFF; }
+    .aigis-preview .c-title__txt {
+      padding-left: 80px;
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 80px; }
+    .aigis-preview .c-title:before, .aigis-preview .c-title:after {
+      display: block;
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: rgba(0, 50, 250, 0.05);
+      content: ''; }
+    .aigis-preview .c-title:before {
+      top: 0;
+      left: 0;
+      -webkit-transform: rotate(45deg) translateX(-50%) translateY(50%);
+      transform: rotate(45deg) translateX(-50%) translateY(50%); }
+    .aigis-preview .c-title:after {
+      top: 0;
+      right: 0;
+      -webkit-transform: rotate(45deg) translateX(50%) translateY(-50%);
+      transform: rotate(45deg) translateX(50%) translateY(-50%); }
   .aigis-preview .c-form-toggle__list li label, .aigis-preview .c-form-toggle__list--inline li label {
     cursor: pointer; }
   .aigis-preview .c-form-toggle__list li {
@@ -5090,7 +5142,7 @@ category:
   .flex-direction-nav .flex-next {
     right: 10px;
     opacity: 1; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
         .aigis-preview .c-dropdown__f-level {
           width: 960px;
           margin: 0 auto;
@@ -5102,28 +5154,6 @@ category:
           vertical-align: top; }
           .aigis-preview .c-dropdown__f-level > li:last-child {
             border-right: none; }
-      .aigis-preview .c-glnav {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100px; }
-        .aigis-preview .c-glnav__inner {
-          display: inline-block;
-          padding: 0 50px;
-          background: #fff;
-          text-align: right; }
-        .aigis-preview .c-glnav__btn {
-          display: none; }
-            .aigis-preview .c-glnav__list__item a {
-              color: #333; }
-          .aigis-preview .c-glnav__list__item {
-            display: inline; }
-            .aigis-preview .c-glnav__list__lang a {
-              color: #333; }
-          .aigis-preview .c-glnav__list__lang {
-            border: none; } }
-  @media screen and (min-width: 769px) {
     .aigis-preview .c-grid-col-1 {
       width: 8.33333%; }
     .aigis-preview .c-grid-col-2 {
@@ -5183,11 +5213,35 @@ category:
       display: table;
       width: 200px;
       text-align: center; }
+    [class^="c-imageText__picture"] img {
+      width: 320px;
+      height: 200px; }
       .aigis-preview .c-modal__contents {
         width: 800px;
         padding: 30px; }
         .aigis-preview .c-modal__close:after, .aigis-preview .c-modal__close:before {
           width: 20px; }
+      .aigis-preview .c-glnav {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px; }
+        .aigis-preview .c-glnav__inner {
+          display: inline-block;
+          padding: 0 50px;
+          background: #fff;
+          text-align: right; }
+        .aigis-preview .c-glnav__btn {
+          display: none; }
+            .aigis-preview .c-glnav__list__item a {
+              color: #333; }
+          .aigis-preview .c-glnav__list__item {
+            display: inline; }
+            .aigis-preview .c-glnav__list__lang a {
+              color: #333; }
+          .aigis-preview .c-glnav__list__lang {
+            border: none; }
       .aigis-preview .c-pager__link {
         width: 28px;
         height: 28px;
@@ -5230,6 +5284,11 @@ category:
           width: 30%; }
         .aigis-preview .c-table--dl dl dd {
           width: 70%; }
+        .aigis-preview .c-title__txt {
+          padding-left: 100px;
+          font-size: 20px;
+          font-size: 2rem;
+          letter-spacing: .5em; }
     .aigis-preview .c-form-toggle__list--inline li {
       display: inline-block;
       cursor: pointer; }

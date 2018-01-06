@@ -1,9 +1,10 @@
 <%
-var page = 'nav_1';
-var title = 'Navigation 1';
+var page = 'nav';
+var title = 'Navigation';
 %>
 @@include('app/ejs/_include/head.ejs')
-<div class="c-glnav" data-js="globalNav">
+@@include('app/ejs/_include/header.ejs')
+<!-- <div class="c-glnav" data-js="globalNav">
 	<div class="c-glnav__btn" data-js="globalNav-btn">
 		<span class="c-glnav__btn__bars"></span>
 	</div>
@@ -22,5 +23,5 @@ var title = 'Navigation 1';
 		</ul>
 	</div>
 	<!-- /.c-glnav__inner -->
-</div>
+<!-- </div> -->
 <!-- /.c-glnav -->
