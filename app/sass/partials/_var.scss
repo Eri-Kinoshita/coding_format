@@ -14,10 +14,10 @@
 // BP
 	$break_point:     768px; // @include pc/sp(){...} で参照されるブレイクポイント
 	//== Screen Size
-	$screen-xs: 480px !default; //Extra small screen(xs)->smartphone
-	$screen-sm: 768px !default; //Small screen(sm) ->tablet
-	$screen-md: 992px !default; //Medium screen(md) ->desktop
-	$screen-lg: 1200px !default; //Large screen(lg） ->wide desktop
+	$screen-xs: 481px !default; //Extra small screen(xs)->smartphone
+	$screen-sm: 769px !default; //Small screen(sm) ->tablet
+	$screen-md: 993px !default; //Medium screen(md) ->desktop
+	$screen-lg: 1201px !default; //Large screen(lg） ->wide desktop
 
 // Grid
 	$grid_split_num:  12; // Gridの分割

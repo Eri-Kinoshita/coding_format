@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Navigation 1</title>
+<title>Navigation</title>
 <!-- Style Sheet -->
 <link rel="stylesheet" href="/files/user/css/style.css" media="all" title="no title" charset="utf-8">
 <!-- Google Font -->
@@ -14,7 +14,29 @@
 </head>
 <body>
 
-<div class="c-glnav" data-js="globalNav">
+ <header class="l-header">
+  <div class="l-container--large l-header__inner">
+    <div class="l-header__logo">
+    	<a href="/"><img src="/files/user/images/logo.png" alt="logo"></a>
+    </div>
+    <div class="c-glnav l-header__glnav" data-js="globalNav">
+      <div class="c-glnav__btn" data-js="globalNav-btn">
+        <span class="c-glnav__btn__bars"></span>
+      </div>
+      <div class="c-glnav__inner">
+        <ul class="c-glnav__list">
+          <li class="c-glnav__list__item is-active"><a href="/nav/">Navigation</a></li>
+          <li class="c-glnav__list__item"> <a href="/grid/">Grid</a></li>
+          <li class="c-glnav__list__item"> <a href="/blog/">Blog</a></li>
+          <li class="c-glnav__list__item"> <a href="/slider/">Slider</a></li>
+          <li class="c-glnav__list__item"> <a href="/imgTxt/">imgTxt</a></li>
+          <li class="c-glnav__list__lang"><a href="" title="">ENGLISH</a> / <a href="" title="">中文</a></li>
+        </ul>
+      </div><!-- /.c-glnav__inner -->
+    </div><!-- /.c-glnav -->
+  </div>
+</header><!-- /.l-header -->
+<!-- <div class="c-glnav" data-js="globalNav">
 	<div class="c-glnav__btn" data-js="globalNav-btn">
 		<span class="c-glnav__btn__bars"></span>
 	</div>
@@ -33,5 +55,5 @@
 		</ul>
 	</div>
 	<!-- /.c-glnav__inner -->
-</div>
+<!-- </div> -->
 <!-- /.c-glnav -->

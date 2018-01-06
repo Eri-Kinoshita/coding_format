@@ -1,0 +1,200 @@
+<%
+var page = 'blog';
+var title = 'ブログ';
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= title %></title>
+<!-- Style Sheet -->
+<link rel="stylesheet" href="/files/user/css/style.css" media="all" title="no title" charset="utf-8">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+<!-- Script -->
+<script src="/files/user/js/scripts.js" charset="utf-8"></script>
+</head>
+<body>
+
+ <header class="l-container--huge l-header">
+    <div class="l-header__logo">
+    	<a href="/"><img src="/files/user/images/logo.png" alt="logo"></a>
+    </div>
+    <div class="c-glnav l-header__glnav" data-js="globalNav">
+      <div class="c-glnav__btn" data-js="globalNav-btn">
+        <span class="c-glnav__btn__bars"></span>
+      </div>
+      <div class="c-glnav__inner">
+        <ul class="c-glnav__list">
+          <li class="c-glnav__list__item <% if (page == 'nav') { is-active"<% } %>><a href="/nav/">Navigation</a></li>
+          <li class="c-glnav__list__item"><a href="/grid/">Grid</a></li>
+          <li class="c-glnav__list__item"><a href="/blog/">Blog</a></li>
+          <li class="c-glnav__list__item"><a href="/slider/">Sldier</a></li>
+          <li class="c-glnav__list__item"><a href="/imgTxt/">imgTxt</a></li>
+          <li class="c-glnav__list__item"><a href="/sidebar/">sidebar</a></li>
+          <li class="c-glnav__list__item"><a href="/news/">News</a></li>
+          <li class="c-glnav__list__item"><a href="/#/">お知らせ</a></li>
+          <li class="c-glnav__list__item"><a href="/#/">採用情報</a></li>
+          <li class="c-glnav__list__lang"><a href="/#/" title="">ENGLISH</a> / <a href="" title="">中文</a></li>
+        </ul>
+      </div><!-- /.c-glnav__inner -->
+    </div><!-- /.c-glnav -->
+</header><!-- /.l-header -->
+
+<!-- _tab.scss -->
+<div class="l-wrap l-container--huge">
+<div class="c-tab">
+  <ul class=c-tab__nav>
+    <li class="c-tab__nav__item is-active" data-tab="1" data-js="change-tab">タブ1</li>
+    <li class="c-tab__nav__item" data-tab="2" data-js="change-tab">タブ2</li>
+    <li class="c-tab__nav__item" data-tab="3" data-js="change-tab">タブ3</li>
+  </ul>
+  <div class="c-tab__content__outer">
+    <div class="c-tab__content" data-tab-content="1">
+      <div class="c-tab__content__inner">
+        タブ1内容タブ1内容タブ1内容<br>
+        タブ1内容タブ1内容タブ1内容<br>
+        タブ1内容タブ1内容タブ1内容<br>
+        タブ1内容タブ1内容タブ1内容<br>
+        タブ1内容タブ1内容タブ1内容<br>
+        タブ1内容タブ1内容タブ1内容<br>
+        タブ1内容タブ1内容タブ1内容
+      </div>
+    </div>
+    <div class="c-tab__content" data-tab-content="2">
+      <div class="c-tab__content__inner">
+        タブ2内容タブ2内容タブ2内容<br>
+        タブ2内容タブ2内容タブ2内容<br>
+        タブ2内容タブ2内容タブ2内容
+      </div>
+    </div>
+    <div class="c-tab__content" data-tab-content="3">
+      <div class="c-tab__content__inner">
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容<br>
+        タブ3内容タブ3内容タブ3内容
+      </div>
+    </div>
+  </div>
+</div>
+<!-- LINK -->
+<h3>LINK</h3>
+<article class="c-article">
+	<p>テキストが入っています。テキストが入っています。<a href="/DUMMY">テキストリンク</a>テキストが入っています。</li>
+	<ul class="c-list--link">
+		<li><a href="/DUMMY"><i class="c-link__icon c-list__icon -front fa fa-caret-right"></i>矢印リンク矢印リンク矢印リンク</a></li>
+		<li><a href="/DUMMY"><i class="c-link__icon c-list__icon -front fa fa-caret-right"></i>別窓リンク別窓リンク別窓リンク別窓リンク<i class="c-link__icon -rear fa fa-window-restore"></i></a></li>
+		<li><a href="/DUMMY"><i class="c-link__icon c-list__icon -front fa fa-caret-right"></i>PDFリンクPDFリンクPDFリンクPDFリンク(532KB)<i class="c-link__icon -rear fa fa-file-pdf-o"></i></a></li>
+	</ul>
+</article>
+
+<!-- リスト -->
+<h3>リスト</h3>
+<ul class="c-list--disc">
+	<li>リストです。リストです。リストです。リストです。リストです。リストです。</li>
+	<li>リストです。リストです。リストです。リストです。リストです。リストです。</li>
+	<li>リストです。リストです。リストです。リストです。リストです。リストです。リストです。リストです。リストです。リストです。リストです。リストです。</li>
+</ul>
+
+<!-- Toggle -->
+<h3>Toggle</h3>
+<div class="c-form__inner">
+    <ul class="c-form-toggle__list">
+        <li><label><input type="radio" name="radio1" value="" class="c-form-toggle__radio">選択肢その1</label></li>
+        <li><label><input type="radio" name="radio1" value="" class="c-form-toggle__radio">選択肢その2</label></li>
+        <li><label><input type="radio" name="radio1" value="" class="c-form-toggle__radio">選択肢その3</label></li>
+    </ul>
+</div>
+
+<div class="c-form__inner">
+    <ul class="c-form-toggle__list--inline">
+        <li><label><input type="radio" name="radio2" value="" class="c-form-toggle__radio">選択肢その1</label></li>
+        <li><label><input type="radio" name="radio2" value="" class="c-form-toggle__radio">選択肢その2</label></li>
+        <li><label><input type="radio" name="radio2" value="" class="c-form-toggle__radio">選択肢その3</label></li>
+    </ul>
+</div>
+
+<!-- トピック -->
+<h3>トピック</h3>
+<ul class="c-topics__list">
+	<li class="c-topics__item">
+		<time class="c-topics__date" datetime="YYYY-mm-dd">2017.10.19</time>
+		<div class="c-topics__label">カテゴリ</div>
+		<div class="c-topics__title"><a href="/DUMMY">記事タイトルが入ります。記事タイトルが入ります。</a></div>
+	</li>
+	<li class="c-topics__item">
+		<time class="c-topics__date" datetime="YYYY-mm-dd">2017.10.19</time>
+		<div class="c-topics__label">カテゴリ</div>
+		<div class="c-topics__title"><a href="/DUMMY">記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。記事タイトルが入ります。</a></div>
+	</li>
+	<li class="c-topics__item">
+		<time class="c-topics__date" datetime="YYYY-mm-dd">2017.10.19</time>
+		<div class="c-topics__label">カテゴリ</div>
+		<div class="c-topics__title"><a href="/DUMMY">記事タイトルが入ります。記事タイトルが入ります。</a></div>
+	</li>
+	<li class="c-topics__item">
+		<time class="c-topics__date" datetime="YYYY-mm-dd">2017.10.19</time>
+		<div class="c-topics__label">カテゴリ</div>
+		<div class="c-topics__title"><a href="/DUMMY">記事タイトルが入ります。記事タイトルが入ります。</a></div>
+	</li>
+	<li class="c-topics__item">
+		<time class="c-topics__date" datetime="YYYY-mm-dd">2017.10.19</time>
+		<div class="c-topics__label">カテゴリ</div>
+		<div class="c-topics__title"><a href="/DUMMY">記事タイトルが入ります。記事タイトルが入ります。</a></div>
+	</li>
+</ul>
+<footer class="l__footer">
+	<div class="l__footer__nav">
+		<ul class="l__footer__nav__list"><a class="l__footer__nav__list--title" href="" title="">会社案内 [What's CBC]</a>
+	    <li><a href="" title="">社長あいさつ</a></li>
+	    <li><a href="" title="">会社概要</a></li>
+	    <li><a href="" title="">IR情報</a></li>
+	    <li><a href="" title="">CSR</a></li>
+	    <li><a href="" title="">サービスエリア</a></li>
+	    <li><a href="" title="">コーポレート・ガバナンス</a></li>
+	    <li><a href="" title="">受賞歴</a></li>
+	    <li><a href="" title="">ニュースリリース</a></li>
+	    <li><a href="" title="">ENGLISH</a></li>
+		</ul>
+	</div>
+	<div class="l__footer__nav">
+		<ul class="l__footer__nav__list">
+			<a class="l__footer__nav__list--title" href="" title="">会社案内 [What's CBC]</a>
+	    <li><a href="" title="">社長あいさつ</a></li>
+	    <li><a href="" title="">会社概要</a></li>
+	    <li><a href="" title="">IR情報</a></li>
+	    <li><a href="" title="">CSR</a></li>
+	    <li><a href="" title="">サービスエリア</a></li>
+	    <li><a href="" title="">コーポレート・ガバナンス</a></li>
+	    <li><a href="" title="">受賞歴</a></li>
+	    <li><a href="" title="">ニュースリリース</a></li>
+	    <li><a href="" title="">ENGLISH</a></li>
+		</ul>
+	</div>
+	<div class="l__footer__nav">
+		<ul class="l__footer__nav__list"><a class="l__footer__nav__list--title" href="" title="">会社案内 [What's CBC]</a>
+	    <li><a href="" title="">社長あいさつ</a></li>
+	    <li><a href="" title="">会社概要</a></li>
+	    <li><a href="" title="">IR情報</a></li>
+	    <li><a href="" title="">CSR</a></li>
+	    <li><a href="" title="">サービスエリア</a></li>
+	    <li><a href="" title="">コーポレート・ガバナンス</a></li>
+	    <li><a href="" title="">受賞歴</a></li>
+	    <li><a href="" title="">ニュースリリース</a></li>
+	    <li><a href="" title="">ENGLISH</a></li>
+		</ul>
+	</div>
+</footer>
+</body>
+</html>

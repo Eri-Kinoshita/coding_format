@@ -1,0 +1,59 @@
+/*
+---
+name: Title
+category:
+ - component/title
+---
+
+```html
+<table class="c-table">
+    <tbody>
+        <tr>    
+            <th>見出しが入ります</th>
+            <td>テキストが入りますテキストが入りますテキストが入ります</td>
+        </tr>
+        <tr>    
+            <th>見出しが入ります</th>
+            <td>テキストが入りますテキストが入りますテキストが入ります</td>
+        </tr>
+    </tbody>
+</table>
+```
+*/
+.c-title {
+    position: relative;
+    width: 90%;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: #FFF;
+    overflow: hidden;
+    &__txt {
+        line-height: 80px;
+        @include fz(18);
+        font-weight: 500;
+        padding-left: 80px;
+        @include mq(sm) {
+            @include fz(20);
+            letter-spacing: .5em;
+            padding-left: 100px;
+        }
+    }
+    &:before, &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background:  rgba(0,50,250,.05);
+    }
+    &:before {
+        top: 0;
+        left: 0;
+        transform: rotate(45deg) translateX(-50%) translateY(50%);
+    }
+    &:after {
+        top: 0;
+        right: 0;
+        transform: rotate(45deg) translateX(50%) translateY(-50%);;
+    }
+}

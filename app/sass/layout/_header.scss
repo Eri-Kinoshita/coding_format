@@ -1,15 +1,15 @@
 .l-header {
-	display: flex;
-	align-items: center;
-	position: relative;
-	top: 0;
-	left: 0;
 	width: 100%;
-	height: auto;
-	background: #fff;
-	z-index: 10000;
 	&__inner {
 		display: flex;
+		align-items: center;
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		background: #fff;
+		z-index: 10000;
 	}
 	&__logo {
 		a {

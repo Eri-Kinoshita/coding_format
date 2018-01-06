@@ -1,0 +1,79 @@
+<%
+var page = 'grid';
+var title = 'Grid';
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= title %></title>
+<!-- Style Sheet -->
+<link rel="stylesheet" href="/files/user/css/style.css" media="all" title="no title" charset="utf-8">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+<!-- Script -->
+<script src="/files/user/js/scripts.js" charset="utf-8"></script>
+</head>
+<body>
+
+ <header class="l-container--huge l-header">
+    <div class="l-header__logo">
+    	<a href="/"><img src="/files/user/images/logo.png" alt="logo"></a>
+    </div>
+    <div class="c-glnav l-header__glnav" data-js="globalNav">
+      <div class="c-glnav__btn" data-js="globalNav-btn">
+        <span class="c-glnav__btn__bars"></span>
+      </div>
+      <div class="c-glnav__inner">
+        <ul class="c-glnav__list">
+          <li class="c-glnav__list__item <% if (page == 'nav') { is-active"<% } %>><a href="/nav/">Navigation</a></li>
+          <li class="c-glnav__list__item"><a href="/grid/">Grid</a></li>
+          <li class="c-glnav__list__item"><a href="/blog/">Blog</a></li>
+          <li class="c-glnav__list__item"><a href="/slider/">Sldier</a></li>
+          <li class="c-glnav__list__item"><a href="/imgTxt/">imgTxt</a></li>
+          <li class="c-glnav__list__item"><a href="/sidebar/">sidebar</a></li>
+          <li class="c-glnav__list__item"><a href="/news/">News</a></li>
+          <li class="c-glnav__list__item"><a href="/#/">お知らせ</a></li>
+          <li class="c-glnav__list__item"><a href="/#/">採用情報</a></li>
+          <li class="c-glnav__list__lang"><a href="/#/" title="">ENGLISH</a> / <a href="" title="">中文</a></li>
+        </ul>
+      </div><!-- /.c-glnav__inner -->
+    </div><!-- /.c-glnav -->
+</header><!-- /.l-header -->
+
+<div class="l-container--huge p-article">
+  <div class="p-article__wrap c-imageText">
+    <div class="c-imageText__picture--left">
+      <img src="/files/user/images/image_01.jpg" alt="画像01">
+      <p class="c-imageText__caption">画像のキャプションが入ります。画像のキャプションが入ります。</p>
+    </div>
+    <p class="c-text">画像左配置＋テキストです。画像左配置＋テキストです。<br>画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。<br>画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。</p>
+  </div>
+
+  <div class="c-imageText p-article__wrap">
+    <div class="c-imageText__picture--left">
+      <img src="/files/user/images/image_02.jpg" alt="画像02">
+      <p class="c-imageText__caption">画像のキャプションが入ります。画像のキャプションが入ります。</p>
+    </div>
+    <p class="c-text">画像左配置＋テキストです。画像左配置＋テキストです。<br>画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。<br>画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。</p>
+  </div>
+
+  <div class="c-imageText p-article__wrap">
+    <div class="c-imageText__picture--left">
+      <img src="/files/user/images/image_03.jpg" alt="画像02">
+      <p class="c-imageText__caption">画像のキャプションが入ります。画像のキャプションが入ります。</p>
+    </div>
+    <p class="c-text">画像左配置＋テキストです。画像左配置＋テキストです。<br>画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。<br>画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。</p>
+  </div>
+
+  <div class="c-imageText p-article__wrap">
+    <div class="c-imageText__picture--left" alt="画像03">
+      <img src="/files/user/images/image_04.jpg">
+      <p class="c-imageText__caption">画像のキャプションが入ります。画像のキャプションが入ります。</p>
+    </div>
+    <p class="c-text">画像左配置＋テキストです。画像左配置＋テキストです。<br>画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。<br>画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。画像左配置＋テキストです。</p>
+  </div>
+
+
+</div>

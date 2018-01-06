@@ -89,6 +89,10 @@ category:
 			}
 			img {
 				@include sp() { width: 100%; }
+				@include pc() {
+					width: 320px;
+					height: 200px;
+				}
 			}
 		}
 	}

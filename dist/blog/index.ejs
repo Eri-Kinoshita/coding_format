@@ -1,0 +1,126 @@
+<%
+var page = 'grid';
+var title = 'Grid';
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= title %></title>
+<!-- Style Sheet -->
+<link rel="stylesheet" href="/files/user/css/style.css" media="all" title="no title" charset="utf-8">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+<!-- Script -->
+<script src="/files/user/js/scripts.js" charset="utf-8"></script>
+</head>
+<body>
+
+ <header class="l-container--huge l-header">
+    <div class="l-header__logo">
+    	<a href="/"><img src="/files/user/images/logo.png" alt="logo"></a>
+    </div>
+    <div class="c-glnav l-header__glnav" data-js="globalNav">
+      <div class="c-glnav__btn" data-js="globalNav-btn">
+        <span class="c-glnav__btn__bars"></span>
+      </div>
+      <div class="c-glnav__inner">
+        <ul class="c-glnav__list">
+          <li class="c-glnav__list__item <% if (page == 'nav') { is-active"<% } %>><a href="/nav/">Navigation</a></li>
+          <li class="c-glnav__list__item"><a href="/grid/">Grid</a></li>
+          <li class="c-glnav__list__item"><a href="/blog/">Blog</a></li>
+          <li class="c-glnav__list__item"><a href="/slider/">Sldier</a></li>
+          <li class="c-glnav__list__item"><a href="/imgTxt/">imgTxt</a></li>
+          <li class="c-glnav__list__item"><a href="/sidebar/">sidebar</a></li>
+          <li class="c-glnav__list__item"><a href="/news/">News</a></li>
+          <li class="c-glnav__list__item"><a href="/#/">お知らせ</a></li>
+          <li class="c-glnav__list__item"><a href="/#/">採用情報</a></li>
+          <li class="c-glnav__list__lang"><a href="/#/" title="">ENGLISH</a> / <a href="" title="">中文</a></li>
+        </ul>
+      </div><!-- /.c-glnav__inner -->
+    </div><!-- /.c-glnav -->
+</header><!-- /.l-header -->
+
+<div class="l-container--huge p-post">
+  <div class="c-title">
+    <h1 class="c-title__txt">ブログ</h1>
+  </div>
+  <article class="c-grid-col-12">
+    <section class="p-post__wrap p-post__col-4 p-post__col-4">
+      <div class="p-post__img" data-js="imgSizing">
+        <img src="/files/user/images/image_01.jpg" alt="画像01">
+      </div>
+      <div class="p-post__inner">
+        <h1 class="p-post__inner__title">開発合宿に行ってきました。Part.1</h1>
+        <div class="p-post__inner__contents">
+          <p class="p-post__inner__contents__txt">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。</p>
+        </div>
+        <div class="p-post__inner__detail">
+          <i class="fa fa-clock-o"></i> <time>August 7, 2014</time>
+          <i class="fa fa-folder"></i> <a href="">Tutorials</a>, <a href="">Coding</a>
+      </div>
+      </div>
+    </section>
+    <section class="p-post__wrap p-post__col-4">
+      <div class="p-post__img" data-js="imgSizing">
+        <img src="/files/user/images/image_02.jpg" alt="画像02">
+      </div>
+      <div class="p-post__inner">
+        <h1 class="p-post__inner__title">開発合宿に行ってきました。Part.1</h1>
+        <div class="p-post__inner__contents">
+          <p class="p-post__inner__contents__txt">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。</p>
+        </div>
+        <div class="p-post__inner__detail">
+          <i class="fa fa-clock-o"></i> <time>August 7, 2014</time>
+          <i class="fa fa-folder"></i> <a href="">Tutorials</a>, <a href="">Coding</a>
+      </div>
+      </div>
+    </section>
+    <section class="p-post__wrap p-post__col-4">
+      <div class="p-post__img" data-js="imgSizing">
+        <img src="/files/user/images/image_03.jpg" alt="画像03">
+      </div>
+      <div class="p-post__inner">
+        <h1 class="p-post__inner__title">開発合宿に行ってきました。Part.1</h1>
+        <div class="p-post__inner__contents">
+          <p class="p-post__inner__contents__txt">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。</p>
+        </div>
+        <div class="p-post__detail">
+          <i class="fa fa-clock-o"></i> <time>August 7, 2014</time>
+          <i class="fa fa-folder"></i> <a href="">Tutorials</a>, <a href="">Coding</a>
+      </div>
+      </div>
+    </section>
+    <section class="p-post__wrap p-post__col-4">
+      <div class="p-post__img" data-js="imgSizing">
+        <img src="/files/user/images/image_04.jpg" alt="画像04">
+      </div>
+      <div class="p-post__inner">
+        <h1 class="p-post__inner__title">開発合宿に行ってきました。Part.1</h1>
+        <div class="p-post__inner__contents">
+          <p class="p-post__inner__contents__txt">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。</p>
+        </div>
+        <div class="p-post__detail">
+          <i class="fa fa-clock-o"></i> <time>August 7, 2014</time>
+          <i class="fa fa-folder"></i> <a href="">Tutorials</a>, <a href="">Coding</a>
+      </div>
+      </div>
+    </section>
+    <section class="p-post__wrap p-post__col-4">
+      <div class="p-post__img" data-js="imgSizing">
+        <img src="/files/user/images/image_05.jpg" alt="画像05">
+      </div>
+      <div class="p-post__inner">
+        <h1 class="p-post__inner__title">開発合宿に行ってきました。Part.1</h1>
+        <div class="p-post__inner__contents">
+          <p class="p-post__inner__contents__txt">親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。</p>
+        </div>
+        <div class="p-post__detail">
+          <i class="fa fa-clock-o"></i> <time>August 7, 2014</time>
+          <i class="fa fa-folder"></i> <a href="">Tutorials</a>, <a href="">Coding</a>
+      </div>
+      </div>
+    </section>
+  </article>
+</div>
